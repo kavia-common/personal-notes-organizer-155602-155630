@@ -1,0 +1,27 @@
+<div class="auth-wrap">
+  <div class="auth-card card">
+    <div class="logo">
+      <span class="dot"></span>
+      <h1>Welcome back</h1>
+    </div>
+
+    <form [formGroup]="form" (ngSubmit)="submit()" class="col">
+      <label>Email</label>
+      <input class="input" formControlName="email" type="email" placeholder="you@example.com" />
+      <div class="error" *ngIf="form.controls.email.touched && form.controls.email.invalid">Enter a valid email</div>
+
+      <label>Password</label>
+      <input class="input" formControlName="password" type="password" placeholder="••••••••" />
+      <div class="error" *ngIf="form.controls.password.touched && form.controls.password.invalid">Password is required</div>
+
+      <button class="btn btn-primary" type="submit" [disabled]="loading">{{ loading ? 'Signing in…' : 'Sign in' }}</button>
+    </form>
+
+    <div class="muted">
+      No account?
+      <a routerLink="/signup">Create one</a>
+    </div>
+
+    <div class="error" *ngIf="error">{{ error }}</div>
+  </div>
+</div>

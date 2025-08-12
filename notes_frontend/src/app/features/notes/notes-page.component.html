@@ -1,0 +1,13 @@
+<div class="notes-grid">
+  <section class="panel list">
+    <div class="row" style="justify-content: space-between; align-items: center; margin-bottom: .5rem;">
+      <h2>Notes</h2>
+      <button class="btn btn-accent" (click)="onCreateNew()">New note</button>
+    </div>
+    <app-note-list (selectNote)="onSelectNote()"></app-note-list>
+  </section>
+
+  <section class="panel editor" [class.hidden]="!showEditorOnMobile()">
+    <app-note-editor (close)="onCloseEditor()"></app-note-editor>
+  </section>
+</div>

@@ -1,0 +1,21 @@
+<div class="nav-inner">
+  <div class="brand">
+    <span class="dot"></span>
+    <strong>Notes</strong>
+  </div>
+
+  <div class="grow"></div>
+
+  <div class="search">
+    <input class="input" type="search" placeholder="Search notes..." [(ngModel)]="search" (ngModelChange)="onSearchChange()" />
+  </div>
+
+  <div class="actions">
+    <button class="btn btn-ghost" (click)="toggleTheme()" title="Toggle theme">
+      🌓
+    </button>
+    <button class="btn btn-ghost" (click)="logout()" title="Logout">
+      Logout
+    </button>
+  </div>
+</div>

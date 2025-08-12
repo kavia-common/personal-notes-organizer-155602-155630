@@ -1,0 +1,25 @@
+.notes-grid {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 1rem;
+}
+
+.panel {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: .75rem;
+  min-height: calc(100vh - 56px - 2rem);
+}
+
+.list { overflow: auto; }
+.editor { overflow: auto; }
+
+@media (max-width: 900px) {
+  .notes-grid {
+    grid-template-columns: 1fr;
+  }
+  .editor.hidden {
+    display: none;
+  }
+}

@@ -1,0 +1,8 @@
+<ul class="note-list">
+  <li class="empty" *ngIf="(vm$ | async)?.length === 0">No notes found.</li>
+  <li *ngFor="let note of (vm$ | async)" (click)="choose(note)">
+    <div class="title">{{ note.title || 'Untitled' }}</div>
+    <div class="preview">{{ note.content | slice:0:120 }}</div>
+    <div class="meta">{{ note.updatedAt | date:'medium' }}</div>
+  </li>
+</ul>

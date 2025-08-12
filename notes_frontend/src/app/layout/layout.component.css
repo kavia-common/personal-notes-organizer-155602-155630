@@ -1,0 +1,17 @@
+.app-nav {
+  padding: .5rem .75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+}
+
+.app-sidebar {
+  padding: .75rem;
+  background: var(--bg);
+  border-right: 1px solid var(--border);
+}
+
+.app-main {
+  padding: 1rem;
+}

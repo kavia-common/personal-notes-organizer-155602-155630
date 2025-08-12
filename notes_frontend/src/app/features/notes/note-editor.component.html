@@ -1,0 +1,18 @@
+<div class="editor-wrap">
+  <div class="row" style="justify-content: space-between; align-items: center;">
+    <div class="row" style="gap:.5rem;">
+      <button class="btn btn-ghost" (click)="cancel()">Back</button>
+      <button class="btn btn-primary" (click)="save()">Save</button>
+    </div>
+    <button class="btn btn-danger" (click)="delete()" [disabled]="!noteId">Delete</button>
+  </div>
+
+  <div class="col" style="margin-top: .75rem;">
+    <input class="input" placeholder="Title" [(ngModel)]="title" />
+    <select class="select" [(ngModel)]="categoryId">
+      <option [ngValue]="null">No category</option>
+      <option *ngFor="let c of categories" [ngValue]="c.id">{{ c.name }}</option>
+    </select>
+    <textarea class="textarea" rows="16" placeholder="Write your note..." [(ngModel)]="content"></textarea>
+  </div>
+</div>
