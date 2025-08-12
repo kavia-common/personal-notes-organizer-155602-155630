@@ -1,0 +1,21 @@
+<div class="sidebar">
+  <div class="section">
+    <div class="section-title">Categories</div>
+    <div class="category-item">
+      <button class="btn btn-ghost" (click)="selectCategory(null)">All</button>
+    </div>
+    <ng-container *ngIf="categories$ | async as categories">
+      <div class="category-item" *ngFor="let c of categories">
+        <button class="btn btn-ghost" (click)="selectCategory(c.id)">{{ c.name }}</button>
+      </div>
+    </ng-container>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Add category</div>
+    <div class="row">
+      <input class="input" [(ngModel)]="newCategoryName" placeholder="Category name" />
+      <button class="btn btn-primary" (click)="addCategory()">Add</button>
+    </div>
+  </div>
+</div>

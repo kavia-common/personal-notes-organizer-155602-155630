@@ -1,0 +1,32 @@
+.nav-inner {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  width: 100%;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.brand .dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: var(--color-accent);
+}
+
+.grow { flex: 1; }
+
+.search {
+  max-width: 360px;
+  width: 100%;
+}
+
+.actions {
+  display: flex;
+  gap: .35rem;
+}
